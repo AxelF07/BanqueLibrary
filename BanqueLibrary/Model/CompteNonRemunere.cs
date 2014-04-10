@@ -11,8 +11,16 @@ namespace ProjetBanque
 		private bool autorisationDecouvert;
 		private double montantDecouvert;
 
-		public int CalculAlgos()
+		public double CalculAgios()
 		{
+            if(Solde < 0)
+            {
+                double agio = ((20/100) * this.Solde);
+                return agio;
+            }else
+            {
+                return 0;
+            }
 		}
 
 		public override int Debiter ()
